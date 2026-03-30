@@ -1,0 +1,31 @@
+# Fichiers compilés
+__pycache__/
+*.py[cod]
+
+# Environnement virtuel
+venv/
+env/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Fichiers sensibles
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Distribution
+build/
+dist/
+*.egg-info/

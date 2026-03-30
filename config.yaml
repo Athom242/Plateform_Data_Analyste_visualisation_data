@@ -1,0 +1,100 @@
+#Module Du Projet Contenant toutes les configurations et les variables globales du projet 
+
+
+
+# ===============================
+# 🌍 ENVIRONNEMENT
+# ===============================
+environment: "dev"
+
+# ===============================
+# 📁 FICHIERS
+# ===============================
+paths:
+  input: "data/raw_data.csv"
+  cleaned: "data/cleaned_data.csv"
+  output: "data/final_report.csv"
+  logs: "logs/app.log"
+
+# ===============================
+# 📊 STRUCTURE DES DONNÉES
+# ===============================
+schema:
+  columns:
+    - CODE
+    - Numero
+    - Nom
+    - Prenom
+    - Date_naissance
+    - Classe
+    - Note
+
+# ===============================
+# 🔧 NETTOYAGE
+# ===============================
+cleaning:
+  remove_empty_rows: true
+  normalize_text: true
+  trim_spaces: true
+
+# ===============================
+# 📅 DATES
+# ===============================
+date:
+  formats:
+    - "%d/%m/%Y"
+    - "%d-%m-%Y"
+    - "%Y-%m-%d"
+    - "%d %m %Y"
+  fix_invalid: true
+
+# ===============================
+# 📚 PARSING DES NOTES
+# ===============================
+grades:
+  subjects:
+    - Math
+    - Francais
+    - Anglais
+    - PC
+    - SVT
+    - HG
+
+  separators:
+    subject_sep: "#"
+    value_sep: "|"
+    exam_sep: ":"
+
+  max_score: 20
+
+# ===============================
+# ⚙️ TRAITEMENT
+# ===============================
+processing:
+  calculate_average: true
+  calculate_rank: true
+  group_by_class: true
+
+# ===============================
+# 📊 ANALYSE
+# ===============================
+analysis:
+  metrics:
+    - moyenne_generale
+    - meilleur_eleve
+    - classement
+    - moyenne_par_matiere
+
+# ===============================
+# 📺 SORTIE
+# ===============================
+output:
+  format: "csv"
+  include_rank: true
+  include_average: true
+
+# ===============================
+# 📝 LOGGING
+# ===============================
+logging:
+  level: "INFO"

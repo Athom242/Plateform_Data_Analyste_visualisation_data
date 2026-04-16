@@ -1,5 +1,5 @@
-import interactiveMenu as interactive
-import traitementData as dataFunction
+import src.project.interactiveMenu as interactive
+import src.project.traitementData as dataFunction
 
 
 #projet de Gestion et traitement de données 

@@ -11,7 +11,14 @@ environment: "dev"
 # 📁 FICHIERS
 # ===============================
 paths:
-  input: "data/raw_data.csv"
+  inputBrutFile: #contient le chemin du fichier brut d'entrée 
+    path: "./data/dataPythonProjectExamen.xlsx"
+    is_existing: true
+  outputBrutFile: #contient le chemin du fichier brut de sortie généré après le traitement
+      path: "./data/dataPythonCSVConvert.csv"
+      is_existing: false
+
+  # input: "data/raw_data.csv"
   cleaned: "data/cleaned_data.csv"
   output: "data/final_report.csv"
   logs: "logs/app.log"
